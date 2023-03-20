@@ -14,17 +14,6 @@ let books = [
     }
 ]
 
-books.forEach(book => {
-    booksList.innerHTML += `
-    <li class="book-item">
-        <h3> ${book.title} </h3>
-        <p> ${book.author} </p>
-        <button class="remove-btn" onclick="remove(book.id)"> Remove </button>
-        <hr />
-    </li>
-    `;
-});
-
 form.onsubmit = (e) => {
     e.preventDefault();
     const title = document.getElementById('title').value;
@@ -35,4 +24,20 @@ form.onsubmit = (e) => {
         author
     };
     books.push(newBook);
+    renderBooks();
 }
+
+function renderBooks() {
+    books.forEach(book => {
+        booksList.innerHTML += `
+        <li class="book-item">
+            <h3> ${book.title} </h3>
+            <p> ${book.author} </p>
+            <button class="remove-btn" onclick="remove(book.id)"> Remove </button>
+            <hr />
+        </li>
+        `;
+    });
+}
+
+renderBooks();

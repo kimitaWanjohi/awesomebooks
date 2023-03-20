@@ -1,4 +1,5 @@
 const booksList = document.getElementById('books-list');
+const form = document.getElementById('form');
 
 let books = [
     {
@@ -23,3 +24,15 @@ books.forEach(book => {
     </li>
     `;
 });
+
+form.onsubmit = (e) => {
+    e.preventDefault();
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const newBook = {
+        id: books.length + 1,
+        title,
+        author
+    };
+    books.push(newBook);
+}

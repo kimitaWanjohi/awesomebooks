@@ -27,6 +27,18 @@ form.onsubmit = (e) => {
     renderBooks();
 }
 
+function saveBooks () {
+    localStorage.setItem('books', JSON.stringify(books));
+}
+
+function getBooks () {
+    const books = localStorage.getItem('books');
+    if (books) {
+        return JSON.parse(books);
+    }
+    return [];
+}
+
 function renderBooks() {
     booksList.innerHTML = '';
     books.forEach(book => {
@@ -34,11 +46,18 @@ function renderBooks() {
         <li class="book-item">
             <h3> ${book.title} </h3>
             <p> ${book.author} </p>
-            <button class="remove-btn" onclick="remove(book.id)"> Remove </button>
+            <button class="remove-btn" onclick="remove(${book.id})"> Remove </button>
             <hr />
         </li>
         `;
     });
 };
+
+function remove(id) {
+    books = books.filter(book => book.id !== id);
+    renderBooks();
+};
+
+
 
 renderBooks();

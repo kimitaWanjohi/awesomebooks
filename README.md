@@ -11,7 +11,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖Python Pulse](#python-pulse)
+- [📖 awesome books](#awesome-books)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖Python Pulse<a name="about-project"></a>
+# 📖 awesome books<a name="about-project"></a>
 
 ** A simple CRUD application for managing books. **
 

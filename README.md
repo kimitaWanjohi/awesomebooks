@@ -108,6 +108,8 @@ Install this project with:
 ## 👥 Author <a name="authors"></a>
 
 - [kimita](https://github.com/kimitaWanjohi)
+- [Samuel Obuobi Lartey](https://github.com/kwesiObuobi)
+
 > Mention all of the collaborators of this project.
 
 👤 **kimita**

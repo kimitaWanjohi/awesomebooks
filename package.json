@@ -8,7 +8,7 @@
     "eslint": "eslint .",
     "hint": "hint .",
     "test": "npm run stylelint && npm run eslint && npm run hint",
-    "fix": "stylelint \"**/*.{css,scss}\" --fix && eslint . --fix && hint . --fix"
+    "fix": "stylelint \"**/*.{css,scss}\" --fix && eslint . --fix"
   },
   "devDependencies": {
     "babel-eslint": "10.x",

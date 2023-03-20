@@ -16,9 +16,9 @@ let books = [
 books.forEach(book => {
     booksList.innerHTML += `
     <li class="book-item">
-        <h3> The Lord of the Rings </h3>
-        <p> J.R.R. Tolkien </p>
-        <button class="remove-btn"> Remove </button>
+        <h3> ${book.title} </h3>
+        <p> ${book.author} </p>
+        <button class="remove-btn" onclick="remove(book.id)"> Remove </button>
         <hr />
     </li>
     `;

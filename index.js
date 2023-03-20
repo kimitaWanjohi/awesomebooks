@@ -28,6 +28,7 @@ form.onsubmit = (e) => {
 }
 
 function renderBooks() {
+    booksList.innerHTML = '';
     books.forEach(book => {
         booksList.innerHTML += `
         <li class="book-item">
@@ -38,6 +39,6 @@ function renderBooks() {
         </li>
         `;
     });
-}
+};
 
 renderBooks();

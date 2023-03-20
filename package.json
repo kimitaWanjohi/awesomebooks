@@ -1,0 +1,24 @@
+{
+  "name": "awesome-books",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "stylelint": "stylelint \"**/*.{css,scss}\"",
+    "eslint": "eslint .",
+    "hint": "hint .",
+    "test": "npm run stylelint && npm run eslint && npm run hint",
+    "fix": "stylelint \"**/*.{css,scss}\" --fix && eslint . --fix && hint . --fix"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.x",
+    "eslint": "7.x",
+    "eslint-config-airbnb-base": "14.x",
+    "eslint-plugin-import": "2.x",
+    "hint": "7.x",
+    "stylelint": "13.x",
+    "stylelint-config-standard": "21.x",
+    "stylelint-csstree-validator": "1.x",
+    "stylelint-scss": "3.x"
+  }
+}

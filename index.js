@@ -1,18 +1,19 @@
 const booksList = document.getElementById('books-list');
 const form = document.getElementById('form');
 
-let books = [
-    {
-        id: 1,
-        title: 'The Awakening',
-        author: 'Kate Chopin'
-    },
-    {
-        id: 2,
-        title: 'City of Glass',
-        author: 'Paul Auster'
+let books = []
+
+function saveBooks () {
+    localStorage.setItem('books', JSON.stringify(books));
+}
+
+function getAndSetBooks() {
+    const storedBooks = localStorage.getItem('books');
+    if (storedBooks) {
+        books = JSON.parse(storedBooks);
     }
-]
+    return [];
+}
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -20,24 +21,15 @@ form.onsubmit = (e) => {
     const author = document.getElementById('author').value;
     const newBook = {
         id: books.length + 1,
-        title,
-        author
+        title: title? title : 'No title',
+        author: author? author : 'No author'
     };
     books.push(newBook);
+    saveBooks();
     renderBooks();
+    form.reset();
 }
 
-function saveBooks () {
-    localStorage.setItem('books', JSON.stringify(books));
-}
-
-function getBooks () {
-    const books = localStorage.getItem('books');
-    if (books) {
-        return JSON.parse(books);
-    }
-    return [];
-}
 
 function renderBooks() {
     booksList.innerHTML = '';
@@ -55,9 +47,9 @@ function renderBooks() {
 
 function remove(id) {
     books = books.filter(book => book.id !== id);
+    saveBooks();
     renderBooks();
 };
 
-
-
+getAndSetBooks();
 renderBooks();

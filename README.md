@@ -116,6 +116,12 @@ Install this project with:
 - [@Twitter](https://twitter.com/kimitaw)
 - [@LinkedIn](https://linkedin.com/in/kimitawanjohi)
 
+👤 **Samuel Obuobi Lartey**
+
+- [@Github](https://github.com/kwesiObuobi)
+- [@Twitter](https://twitter.com/kwesi_obuobi)
+- [@LinkedIn](https://www.linkedin.com/in/kwesi-obuobi/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

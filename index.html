@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title> Awesome books </title>
 </head>
 <body>
@@ -12,13 +13,19 @@
         <div class="book-list">
             <ul id="books-list">
             </ul>
-
-            <form action="" id="form">
-                <input type="text" placeholder="Title" id="title"><br><br>
-                <input type="text" placeholder="Author" id="author"> <br><br>
-                <button type="submit">Add</button>
-            </form>
         </div>
+
+        <hr class="hr">
+
+        <h2> Add a new book </h2>
+
+        <form class="form" id="form">
+            <input type="text" class="form-control" required placeholder="Title" id="title">
+            <input type="text" class="form-control" required placeholder="Author" id="author"> 
+            <div class="w-60">
+                <button type="submit" class="end">Add Book</button>
+            </div>
+        </form>
     </main>
     <script src="index.js"></script>
 </body>

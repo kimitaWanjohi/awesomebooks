@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -19,6 +20,7 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
+  align-items: center;
 }
 
 .book-list ul li:nth-child(odd) {
@@ -31,4 +33,31 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.hr {
+  border: 1px solid black;
+  max-width: 40%;
+  margin: 1rem auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 0.8rem;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.form-control {
+  border: 1px solid black;
+  padding: 0.5rem;
+  width: 60%;
+}
+
+.w-60 {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
 }

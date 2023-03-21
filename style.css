@@ -61,3 +61,35 @@ button:hover {
   display: flex;
   justify-content: flex-end;
 }
+
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  margin: .5rem;
+  border: 1px solid black;
+}
+
+.navigation ul {
+  padding-left: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  display: inline;
+  border-right: solid 2px black;
+  padding: 0 .5rem;
+}
+
+.navigation ul li:last-child {
+  border-right: none;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

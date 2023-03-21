@@ -11,7 +11,6 @@ const listLink = document.getElementById('list-link');
 const formLink = document.getElementById('form-link');
 const contactLink = document.getElementById('contact-link');
 
-// hide form and contact section
 formSection.style.display = 'none';
 contact.style.display = 'none';
 
@@ -83,7 +82,7 @@ class Books {
       booksList.innerHTML += `
           <li class="book-item">
               <p> ${book.title} by ${book.author} </p>
-              <button class="remove-btn" onclick="remove(${book.id})"> Remove </button>
+              <button class="remove-btn" data-id="${book.id}" onclick="remove(${book.id})"> Remove </button>
           </li>
           `;
     });
@@ -92,7 +91,6 @@ class Books {
 
 const books = new Books();
 
-// eslint-disable-next-line no-unused-vars
 const remove = (id) => {
   books.removeBook(id);
   books.saveBooks();
@@ -106,7 +104,14 @@ form.onsubmit = (e) => {
   form.reset();
 };
 
-window.onload = () => {
-  books.getBooks();
-  books.renderBooks();
-};
+books.getBooks();
+books.renderBooks();
+const removeBtns = document.querySelectorAll('.remove-btn');
+removeBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    remove(btn.dataset.id);
+    books.saveBooks();
+    books.renderBooks();
+  });
+});
+

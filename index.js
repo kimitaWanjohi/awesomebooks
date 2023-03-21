@@ -7,31 +7,35 @@ const time = document.getElementById('time');
 const list = document.getElementById('list');
 const formSection = document.getElementById('form-section');
 const contact = document.getElementById('contact');
+const listLink = document.getElementById('list-link');
+const formLink = document.getElementById('form-link');
+const contactLink = document.getElementById('contact-link');
 
 // hide form and contact section
 formSection.style.display = 'none';
 contact.style.display = 'none';
 
-// eslint-disable-next-line no-unused-vars
 function showForm() {
   formSection.style.display = 'block';
   contact.style.display = 'none';
   list.style.display = 'none';
 }
 
-// eslint-disable-next-line no-unused-vars
 function showContact() {
   contact.style.display = 'block';
   formSection.style.display = 'none';
   list.style.display = 'none';
 }
 
-// eslint-disable-next-line no-unused-vars
 function showList() {
   list.style.display = 'block';
   formSection.style.display = 'none';
   contact.style.display = 'none';
 }
+
+formLink.addEventListener('click', showForm);
+contactLink.addEventListener('click', showContact);
+listLink.addEventListener('click', showList);
 
 setInterval(() => {
   const date = new Date();

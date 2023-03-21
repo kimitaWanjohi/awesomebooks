@@ -2,9 +2,33 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+}
+
+main {
+  width: 70%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.book-list ul {
+  margin: 1rem auto;
+  border: 2px solid black;
+}
+
+.book-list ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.book-list ul li:nth-child(odd) {
+  background-color: #e4dcdc;
+}
+
+button {
+  padding: 0.3rem;
+}
+
+button:hover {
+  cursor: pointer;
 }

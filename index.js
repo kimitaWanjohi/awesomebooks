@@ -3,6 +3,43 @@ const booksList = document.getElementById('books-list');
 const form = document.getElementById('form');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
+const time = document.getElementById('time');
+const list = document.getElementById('list');
+const formSection = document.getElementById('form-section');
+const contact = document.getElementById('contact');
+const listLink = document.getElementById('list-link');
+const formLink = document.getElementById('form-link');
+const contactLink = document.getElementById('contact-link');
+
+formSection.style.display = 'none';
+contact.style.display = 'none';
+
+function showForm() {
+  formSection.style.display = 'block';
+  contact.style.display = 'none';
+  list.style.display = 'none';
+}
+
+function showContact() {
+  contact.style.display = 'block';
+  formSection.style.display = 'none';
+  list.style.display = 'none';
+}
+
+function showList() {
+  list.style.display = 'block';
+  formSection.style.display = 'none';
+  contact.style.display = 'none';
+}
+
+formLink.addEventListener('click', showForm);
+contactLink.addEventListener('click', showContact);
+listLink.addEventListener('click', showList);
+
+setInterval(() => {
+  const date = new Date();
+  time.innerHTML = date.toLocaleTimeString();
+}, 1000);
 
 class Book {
   constructor(title, author) {
@@ -45,7 +82,7 @@ class Books {
       booksList.innerHTML += `
           <li class="book-item">
               <p> ${book.title} by ${book.author} </p>
-              <button class="remove-btn" onclick="remove(${book.id})"> Remove </button>
+              <button class="remove-btn" data-id="${book.id}" onclick="remove(${book.id})"> Remove </button>
           </li>
           `;
     });
@@ -54,7 +91,6 @@ class Books {
 
 const books = new Books();
 
-// eslint-disable-next-line no-unused-vars
 const remove = (id) => {
   books.removeBook(id);
   books.saveBooks();
@@ -64,10 +100,17 @@ const remove = (id) => {
 form.onsubmit = (e) => {
   e.preventDefault();
   books.addBook(new Book(title.value, author.value));
+  showList();
   form.reset();
 };
 
-window.onload = () => {
-  books.getBooks();
-  books.renderBooks();
-};
+books.getBooks();
+books.renderBooks();
+const removeBtns = document.querySelectorAll('.remove-btn');
+removeBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    remove(btn.dataset.id);
+    books.saveBooks();
+    books.renderBooks();
+  });
+});

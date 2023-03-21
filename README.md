@@ -53,9 +53,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[ Crud functionality ]**
-- **[ Local Storage ]**
--  **[ Responsive ]**
+- **Crud functionality**
+- **Local Storage**
+-  **Responsive**
 <!-- - **[key_feature_3]** -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -63,7 +63,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo 
-[Live Demo Link]()
+Live Demo is not available
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

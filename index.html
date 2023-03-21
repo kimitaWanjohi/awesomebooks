@@ -8,25 +8,66 @@
     <title> Awesome books </title>
 </head>
 <body>
-    <main>
-        <h1> Awesome books </h1>
-        <div class="book-list">
-            <ul id="books-list">
+    <header>
+        <nav class="navigation">
+            <h3>
+                Awesome books
+            </h3>
+
+            <ul>
+                <li>
+                    <a href="#list" id="list-link">List</a>
+                </li>
+                <li>
+                    <a href="#form-section" id="form-link">Add new</a>
+                </li>
+                <li>
+                    <a href="#contact" id="contact-link">Contact</a>
+                </li>
             </ul>
+        </nav>    
+        <div class="time" id="time">
         </div>
-
-        <hr class="hr">
-
-        <h2> Add a new book </h2>
-
-        <form class="form" id="form">
-            <input type="text" class="form-control" required placeholder="Title" id="title">
-            <input type="text" class="form-control" required placeholder="Author" id="author"> 
-            <div class="w-60">
-                <button type="submit" class="end">Add Book</button>
+    </header>
+    <main>
+        <section id="list">
+            <h1> Awesome books </h1>
+            <div class="book-list">
+                <ul id="books-list">
+                </ul>
             </div>
-        </form>
+    
+            <hr class="hr">
+        </section>
+
+        <section id="form-section">
+            <h2> Add a new book </h2>
+    
+            <form class="form" id="form">
+                <input type="text" class="form-control" required placeholder="Title" id="title">
+                <input type="text" class="form-control" required placeholder="Author" id="author"> 
+                <div class="w-60">
+                    <button type="submit" class="end">Add Book</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2 class="contact-h2">Contact Information</h2>
+            <p>Do you have any questions or you just want to say "Hello"? <br>
+                You can reach out to us!</p>
+            <ul class="contact-list">
+                <li>Our e-mail: kimisam@success.us</li>
+                <li>Our phone number: 001234567891011</li>
+                <li>Our address: Streetname 44, 98745 Nairobi, Kenya</li>
+            </ul>
+        </section>
     </main>
+    <footer>
+        <p>
+            All rights reserved by &copy;2021
+        </p>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>

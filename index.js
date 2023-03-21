@@ -3,6 +3,13 @@ const booksList = document.getElementById('books-list');
 const form = document.getElementById('form');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
+const time = document.getElementById('time');
+
+setInterval(() => {
+  const date = new Date();
+  time.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
 
 class Book {
   constructor(title, author) {

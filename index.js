@@ -4,11 +4,40 @@ const form = document.getElementById('form');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const time = document.getElementById('time');
+const list = document.getElementById('list');
+const formSection = document.getElementById('form-section');
+const contact = document.getElementById('contact');
+
+//hide form and contact section
+formSection.style.display = 'none';
+contact.style.display = 'none';
+
+// eslint-disable-next-line no-unused-vars
+function showForm() {
+  formSection.style.display = 'block';
+  contact.style.display = 'none';
+  list.style.display = 'none';
+}
+
+// eslint-disable-next-line no-unused-vars
+function showContact() {
+  contact.style.display = 'block';
+  formSection.style.display = 'none';
+  list.style.display = 'none';
+}
+
+// eslint-disable-next-line no-unused-vars
+function showList() {
+  list.style.display = 'block';
+  formSection.style.display = 'none';
+  contact.style.display = 'none';
+}
 
 setInterval(() => {
   const date = new Date();
   time.innerHTML = date.toLocaleTimeString();
 }, 1000);
+
 
 
 class Book {
@@ -71,6 +100,7 @@ const remove = (id) => {
 form.onsubmit = (e) => {
   e.preventDefault();
   books.addBook(new Book(title.value, author.value));
+  showList();
   form.reset();
 };
 

@@ -11,9 +11,25 @@ main {
   text-align: center;
 }
 
-.book-list ul {
-  margin: 1rem auto;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
   border: 2px solid black;
+}
+
+.navigation ul {
+  padding-left: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  display: inline;
+  border-right: solid 2px black;
+  padding: 0 0.5rem;
 }
 
 .book-list ul li {
@@ -21,6 +37,25 @@ main {
   justify-content: space-between;
   padding: 0.5rem;
   align-items: center;
+}
+
+.navigation ul li:last-child {
+  border-right: none;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.navigation ul li a:hover {
+  color: #e4dcdc;
+}
+
+.book-list ul {
+  margin: 1rem auto;
+  border: 2px solid black;
 }
 
 .book-list ul li:nth-child(odd) {
@@ -67,7 +102,6 @@ CONTACT SECTION
 */
 
 #contact {
-  margin-top: 2rem;
   width: 60%;
   margin: 2rem auto 0;
 }
@@ -87,47 +121,12 @@ CONTACT SECTION
   padding-left: 2rem;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .5rem;
-  margin: .5rem;
-  border: 2px solid black;
-}
-
-.navigation ul {
-  padding-left: 0;
-  display: flex;
-  list-style-type: none;
-}
-
-.navigation ul li {
-  display: inline;
-  border-right: solid 2px black;
-  padding: 0 .5rem;
-}
-
-.navigation ul li:last-child {
-  border-right: none;
-}
-
-.navigation ul li a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-}
-
-.navigation ul li a:hover {
-  color: #e4dcdc;
-}
-
 .time {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 .5rem;
-  margin: 0 .5rem;
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
   font-weight: 500;
 }
 

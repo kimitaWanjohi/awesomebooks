@@ -8,7 +8,7 @@ const list = document.getElementById('list');
 const formSection = document.getElementById('form-section');
 const contact = document.getElementById('contact');
 
-//hide form and contact section
+// hide form and contact section
 formSection.style.display = 'none';
 contact.style.display = 'none';
 
@@ -37,8 +37,6 @@ setInterval(() => {
   const date = new Date();
   time.innerHTML = date.toLocaleTimeString();
 }, 1000);
-
-
 
 class Book {
   constructor(title, author) {

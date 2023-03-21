@@ -106,3 +106,12 @@ button:hover {
   margin: 0 .5rem;
   font-weight: 500;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid black;
+}

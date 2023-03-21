@@ -61,3 +61,28 @@ button:hover {
   display: flex;
   justify-content: flex-end;
 }
+
+/*
+CONTACT SECTION
+*/
+
+#contact {
+  margin-top: 2rem;
+  width: 60%;
+  margin: 2rem auto 0;
+}
+
+.contact-h2 {
+  margin-bottom: 2rem;
+}
+
+#contact p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 2rem;
+}

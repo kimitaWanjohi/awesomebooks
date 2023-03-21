@@ -114,4 +114,3 @@ removeBtns.forEach((btn) => {
     books.renderBooks();
   });
 });
-

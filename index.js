@@ -1,3 +1,4 @@
+/* eslint max-classes-per-file: ["error", 2] */
 const booksList = document.getElementById('books-list');
 const form = document.getElementById('form');
 const title = document.getElementById('title');
@@ -51,8 +52,9 @@ class Books {
   }
 }
 
-let books = new Books();
+const books = new Books();
 
+// eslint-disable-next-line no-unused-vars
 const remove = (id) => {
   books.removeBook(id);
   books.saveBooks();

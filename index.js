@@ -1,22 +1,17 @@
 import { Book, Books } from './modules/books.js';
-import { DateTime } from './node_modules/luxon/src/luxon.js'
-import { showForm, showContact, showList } from './modules/navigation.js';
-import { listLink, formLink, contactLink, formSection, contact } from './modules/navigation.js';
+import { DateTime } from './node_modules/luxon/src/luxon.js';
+import {
+  showForm, showContact, showList, listLink, formLink, contactLink, formSection, contact,
+} from './modules/navigation.js';
 
 const form = document.getElementById('form');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const time = document.getElementById('time');
 
-let now = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
-
-console.log(now);
-
-// updata the time every second
 setInterval(() => {
   time.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
 }, 1000);
-
 
 formSection.style.display = 'none';
 contact.style.display = 'none';
@@ -24,7 +19,6 @@ contact.style.display = 'none';
 formLink.addEventListener('click', () => showForm());
 contactLink.addEventListener('click', () => showContact());
 listLink.addEventListener('click', () => showList());
-
 
 const books = new Books();
 
@@ -37,4 +31,3 @@ form.onsubmit = (e) => {
 
 books.getBooks();
 books.renderBooks();
-

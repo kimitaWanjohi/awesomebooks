@@ -17,6 +17,7 @@
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
       }],
+      "max-classes-per-file": ["error", 2],
       "import/no-unresolved": "off"
     },
     "ignorePatterns": [

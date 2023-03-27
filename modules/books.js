@@ -1,4 +1,4 @@
-/* eslint max-classes-per-file: ["error", 2] */
+/* eslint */
 const booksList = document.getElementById('books-list');
 
 export class Book {

@@ -1,3 +1,5 @@
+const booksList = document.getElementById('books-list');
+
 export class Book {
     constructor(title, author) {
       this.title = title;
@@ -36,12 +38,23 @@ export class Book {
     renderBooks() {
       booksList.innerHTML = '';
       this.books.forEach((book) => {
-        booksList.innerHTML += `
-            <li class="book-item">
-                <p> ${book.title} by ${book.author} </p>
-                <button class="remove-btn" data-id="${book.id}" onclick="remove(${book.id})"> Remove </button>
-            </li>
-            `;
+        const li = document.createElement('li');
+        li.classList.add('book-item');
+        const p = document.createElement('p');
+        p.innerHTML = `${book.title} by ${book.author}`;
+        const button = document.createElement('button');
+        button.classList.add('remove-btn');
+        button.innerHTML = 'Remove';
+        button.onclick = (e) => {
+            this.removeBook(book.id);
+            this.saveBooks();
+            this.renderBooks();
+        }
+        li.appendChild(p);
+        li.appendChild(button);
+        booksList.appendChild(li);
       });
     }
   }
+
+  

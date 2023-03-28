@@ -32,4 +32,4 @@ form.onsubmit = (e) => {
 };
 
 books.getBooks();
-books.renderBooks();    
+books.renderBooks();

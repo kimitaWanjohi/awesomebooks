@@ -27,9 +27,9 @@ const books = new Books();
 form.onsubmit = (e) => {
   e.preventDefault();
   books.addBook(new Book(title.value, author.value));
-  showList();
+
   form.reset();
 };
 
 books.getBooks();
-books.renderBooks();
+books.renderBooks();    
